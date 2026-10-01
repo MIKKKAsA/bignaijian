@@ -22,7 +22,7 @@
   const GRAVITY   = 2600;    // px/s²
   const SUBSTEPS  = 3;       // 每帧物理子步
   const ITER      = 6;       // 每个子步的约束迭代次数
-  const DROP_MS   = 360;     // 两次投放的最小间隔
+  const DROP_MS   = 100;     // 两次投放的最小间隔
   const OVER_LIMIT = 10;    // 越线持续多少秒判负
   const REST_SPEED = 140;    // 线上方且速度低于它才算“卡住”（被弹飞路过的不算）
   const REST_SPEED2 = REST_SPEED * REST_SPEED;
@@ -32,12 +32,12 @@
   const MERGE_PAD = 0.8;     // 合成判定的接触容差（px）
 
   /* —— Q 弹手感 —— */
-  const RESTITUTION      = 0.64;  // 球与球之间的弹性
-  const WALL_RESTITUTION = 0.45;  // 撞墙 / 撞地面的弹性
+  const RESTITUTION      = 0.9;  // 球与球之间的弹性
+  const WALL_RESTITUTION = 0.8;  // 撞墙 / 撞地面的弹性
   const REST_THRESHOLD   = 20;    // 撞击速度低于此值不反弹（保证堆叠稳、不抖）
   const FRICTION         = 0.955; // 接触时的切向摩擦（每个子步）
-  const SQUASH_DECAY     = 20;     // 挤压回弹速度
-  const SQUASH_MAX       = 0.50;  // 最大挤压变形
+  const SQUASH_DECAY     = 40;     // 挤压回弹速度
+  const SQUASH_MAX       = 0.30;  // 最大挤压变形
 
   /* 水果链：索引越大越大
      file : assets/fruits/ 下的贴图（由 tools/normalize_assets.py 统一生成）
