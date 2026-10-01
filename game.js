@@ -14,7 +14,7 @@
    * ------------------------------------------------------- */
 
   const W = 420;             // 逻辑宽度
-  const H = 700;             // 逻辑高度
+  const H = 750;             // 逻辑高度
   const WALL = 10;           // 左右墙厚
   const DROP_Y = 74;         // 待投放水果的高度
   const DANGER_Y = 142;      // 警戒线
@@ -23,12 +23,12 @@
   const SUBSTEPS  = 3;       // 每帧物理子步
   const ITER      = 6;       // 每个子步的约束迭代次数
   const DROP_MS   = 360;     // 两次投放的最小间隔
-  const OVER_LIMIT = 100;    // 越线持续多少秒判负
+  const OVER_LIMIT = 10;    // 越线持续多少秒判负
   const REST_SPEED = 140;    // 线上方且速度低于它才算“卡住”（被弹飞路过的不算）
   const REST_SPEED2 = REST_SPEED * REST_SPEED;
 
   const MAX_TIER  = 10;      // 大西瓜的索引
-  const MAX_BONUS = 100;     // 两个大西瓜相撞的奖励分
+  const MAX_BONUS = 1000;     // 两个大西瓜相撞的奖励分
   const MERGE_PAD = 0.8;     // 合成判定的接触容差（px）
 
   /* —— Q 弹手感 —— */
@@ -36,7 +36,7 @@
   const WALL_RESTITUTION = 0.45;  // 撞墙 / 撞地面的弹性
   const REST_THRESHOLD   = 20;    // 撞击速度低于此值不反弹（保证堆叠稳、不抖）
   const FRICTION         = 0.955; // 接触时的切向摩擦（每个子步）
-  const SQUASH_DECAY     = 9;     // 挤压回弹速度
+  const SQUASH_DECAY     = 20;     // 挤压回弹速度
   const SQUASH_MAX       = 0.50;  // 最大挤压变形
 
   /* 水果链：索引越大越大
