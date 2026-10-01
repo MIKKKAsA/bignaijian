@@ -34,7 +34,7 @@
   /* —— Q 弹手感 —— */
   const RESTITUTION      = 0.64;  // 球与球之间的弹性
   const WALL_RESTITUTION = 0.45;  // 撞墙 / 撞地面的弹性
-  const REST_THRESHOLD   = 10;    // 撞击速度低于此值不反弹（保证堆叠稳、不抖）
+  const REST_THRESHOLD   = 20;    // 撞击速度低于此值不反弹（保证堆叠稳、不抖）
   const FRICTION         = 0.955; // 接触时的切向摩擦（每个子步）
   const SQUASH_DECAY     = 9;     // 挤压回弹速度
   const SQUASH_MAX       = 0.50;  // 最大挤压变形
@@ -71,7 +71,7 @@
   ];
 
   /* 合成出 tier 的得分（三角数） */
-  const MERGE_SCORE = [0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 55];
+  const MERGE_SCORE = [0, 1, 3, 6, 10, 15, 21, 28, 36, 45, 211];
 
   /* 新水果的掉落权重（越小越常见） */
   const SPAWN_TIERS = [0, 1, 2, 3, 7];
